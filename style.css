@@ -1,0 +1,231 @@
+/* 1. Reset & Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf2;
+    color: #142e52;
+}
+
+/* 2. Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    font-size: 28px;
+    color: #142e52;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #142e52;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #ff6868;
+}
+
+.keranjang {
+    font-size: 25px;
+}
+
+/* 3. Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 8%;
+    background-color: #f5eadc;
+    overflow: hidden;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #536783;
+}
+
+.tombol {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #ff6868;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.tombol:hover {
+    background-color: #e95050;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Badge Promo */
+.badge-promo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 15px;
+    background-color: #ff6868;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    transform: rotate(8deg);
+}
+
+.badge-promo strong {
+    display: block;
+    font-size: 25px;
+}
+
+/* 4. Gallery */
+.produk {
+    padding: 35px 8%;
+}
+
+.produk h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.kartu {
+    padding: 15px;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.kartu img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.kartu h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.kartu p {
+    color: #536783;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.harga {
+    color: #ff6868;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #f5eadc;
+    color: #536783;
+}
+
+/* Tampilan HP */
+@media (max-width: 700px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 35px 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .hero-image img {
+        height: 220px;
+    }
+
+    .badge-promo {
+        top: 10px;
+        right: 10px;
+    }
+
+    .produk {
+        padding: 30px 5%;
+    }
+
+    .produk h2 {
+        font-size: 28px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
